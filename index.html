@@ -1,122 +1,173 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MB Dein Dienstleister – Hausmeisterservice & Gartenpflege</title>
-  <meta name="description" content="Hausmeisterservice, Gartenpflege, Pflasterarbeiten, Zaunbau und mehr in Teltow, Kleinmachnow, Stahnsdorf und Berlin Süd. Zuverlässig. Vielseitig. Persönlich.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MB Dein Dienstleister – Hausmeisterservice & Gartenbau in Stahnsdorf</title>
+  <meta name="description" content="MB Dein Dienstleister (Inh. Maik Bielefeldt) – Hausmeisterservice, Gartenpflege, Pflasterarbeiten, Trockenbau & Aufbau von Carports/Schuppen in Teltow, Kleinmachnow, Stahnsdorf und Berlin Süd.">
+  <meta name="keywords" content="Hausmeisterservice Stahnsdorf, Gartenpflege Stahnsdorf, Galabau Stahnsdorf, Pflasterarbeiten, Winterdienst">
+  <link rel="canonical" href="https://www.deinedomain.de/">
+
+  <!-- Farben angelehnt an deinen Flyer -->
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f7f4ed;
-      margin: 0;
-      color: #1f2a44;
+    :root{
+      --navy:#12313f;       /* dunkles Blau */
+      --olive:#9aa86b;      /* olivgrün */
+      --beige:#efe6d0;      /* flyer-beige */
+      --muted:#2f4b4b;
+      --max-width:1000px;
     }
-    header {
-      background-color: #f7f4ed;
-      text-align: center;
-      padding: 20px;
-      border-bottom: 4px solid #a4af7b;
-    }
-    header img {
-      width: 140px;
-      border-radius: 8px;
-    }
-    h1 {
-      margin: 10px 0 5px;
-      color: #1f2a44;
-    }
-    h2 {
-      color: #2f3a56;
-      margin-top: 40px;
-    }
-    .content {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    ul li::before {
-      content: "✔️ ";
-      color: #a4af7b;
-    }
-    .bilder {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-top: 15px;
-    }
-    .bilder img {
-      width: 48%;
-      border-radius: 6px;
-    }
-    footer {
-      background-color: #1f2a44;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-    a {
-      color: #a4af7b;
-      text-decoration: none;
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial; color:#222;background:var(--beige);line-height:1.45}
+    .wrap{max-width:var(--max-width);margin:0 auto;padding:20px}
+    header{display:flex;gap:20px;align-items:center;padding:18px;border-radius:10px;background:linear-gradient(90deg, rgba(18,49,63,0.9), rgba(18,49,63,0.85));color:white}
+    .logo{width:110px;height:110px;flex:0 0 110px;background:white;border-radius:10px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+   <img src="images/79B23FB3-2B39-4453-BAD3-74606316769C.png" alt="MB Dein Dienstleister Logo">
+    .logo img{max-width:100%;max-height:100%;display:block}
+    .hero-text h1{margin:0;font-size:1.6rem;line-height:1.05}
+    .hero-text p{margin:6px 0 0 0;opacity:0.95}
+    .cta{margin-left:auto;text-align:right}
+    .cta a{display:inline-block;margin-left:6px;background:var(--olive);color:white;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600}
+    main{margin-top:18px}
+    .intro{background:rgba(255,255,255,0.85);padding:18px;border-radius:10px}
+    h2{color:var(--navy);margin-top:0}
+    ul.services{padding-left:18px}
+    ul.services li{margin:8px 0}
+    .two-col{display:flex;gap:18px;flex-wrap:wrap;margin-top:18px}
+    .left{flex:1;min-width:260px}
+    .right{flex:0 0 320px;min-width:280px}
+    .card{background:white;padding:14px;border-radius:10px}
+    .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .gallery img{width:100%;height:160px;object-fit:cover;border-radius:8px}
+    footer{margin-top:20px;padding:12px;text-align:center;background:#163940;color:white;border-radius:8px}
+    .contact-block{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+    .contact-block a{color:white;text-decoration:none;font-weight:600}
+    .small{font-size:0.9rem;color:#333}
+    /* responsive */
+    @media (max-width:720px){
+      header{flex-direction:row;align-items:center}
+      .right{flex-basis:100%}
+      .gallery img{height:120px}
     }
   </style>
+
+  <!-- LocalBusiness structured data (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"HomeAndConstructionBusiness",
+    "name":"MB Dein Dienstleister (Maik Bielefeldt)",
+    "image":"https://www.deinedomain.de/images/logo.png",
+    "telephone":"015236908581",
+    "email":"info@mbdeindienstleister.de",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"Florazeile",
+      "postalCode":"14532",
+      "addressLocality":"Stahnsdorf",
+      "addressRegion":"Brandenburg",
+      "addressCountry":"DE"
+    },
+    "areaServed":["Teltow","Kleinmachnow","Stahnsdorf","Berlin Süd","Berlin Umgebung"],
+    "description":"Hausmeisterservice, Gartenbau & Trockenbau: Rasenpflege, Pflasterarbeiten, Carports/Schuppen, Zaunbau, Dachkasten streichen und individuelle Arbeiten."
+  }
+  </script>
 </head>
 <body>
+  <div class="wrap">
+    <header>
+      <div class="logo">
+        <!-- Bitte ersetze images/logo.png durch dein echtes Logo -->
+        <img src="images/logo.png" alt="MB Dein Dienstleister Logo">
+      </div>
 
-  <header>
-    <img src="images/79B23FB3-2B39-4453-BAD3-74606316769C.png" alt="MB Dein Dienstleister Logo">
-    <h1>MB Dein Dienstleister</h1>
-    <p><strong>Inh. Maik Bielefeldt</strong> – Zuverlässig. Vielseitig. Persönlich.</p>
-    <p>Florazeile, 14532 Stahnsdorf • Tel. <a href="tel:015236908581">01523 / 6908581</a> • 
-    <a href="mailto:info@mbdeindienstleister.de">info@mbdeindienstleister.de</a></p>
-  </header>
+      <div class="hero-text">
+        <h1>MB Dein Dienstleister</h1>
+        <p><strong>Inh. Maik Bielefeldt</strong> — Zuverlässig. Vielseitig. Persönlich.</p>
+        <p class="small">Florazeile, 14532 Stahnsdorf · Teltow · Kleinmachnow · Berlin Süd & Umland</p>
+      </div>
 
-  <div class="content">
-    <h2>Wir kümmern uns rund ums Haus und Ihren Garten!</h2>
-    <p>Ob gepflegter Garten, saubere Dachrinnen oder ein neuer Carport – bei uns sind Sie in den besten Händen. 
-    Wir bieten zuverlässige Dienstleistungen für Privatkunden und Eigentümergemeinschaften in 
-    <strong>Teltow, Kleinmachnow, Stahnsdorf, Berlin Süd & Umland</strong>.</p>
+      <div class="cta">
+        <div style="font-weight:700">Kostenlose Besichtigung</div>
+        <a href="tel:+4915236908581">Anrufen: 01523 6908581</a>
+        <div style="margin-top:6px"><a href="mailto:info@mbdeindienstleister.de" style="background:transparent;border:2px solid white;padding:8px 10px;border-radius:8px;color:white;text-decoration:none;font-weight:600">E-Mail</a></div>
+      </div>
+    </header>
 
-    <h2>Unsere Leistungen</h2>
-    <ul>
-      <li>Hausmeisterservice & Objektbetreuung</li>
-      <li>Rasenpflege, Neuanlage & Gartenbewässerung</li>
-      <li>Pflasterarbeiten & Gehwegreinigung</li>
-      <li>Aufbau von Carports, Schuppen & Gartenhäusern</li>
-      <li>Zaunaufbau & Instandsetzungen</li>
-      <li>Streichen von Dachkästen & Holzfassaden</li>
-      <li>Trockenbau & individuelle Arbeiten auf Anfrage</li>
-    </ul>
+    <main>
+      <section class="intro card">
+        <h2>Wir kümmern uns rund ums Haus & Ihren Garten</h2>
+        <p>Ob gepflegter Garten, saubere Dachrinnen, Pflasterarbeiten oder der Aufbau eines Carports — bei <strong>MB Dein Dienstleister</strong> sind Sie in besten Händen. Wir bieten zuverlässigen Hausmeisterservice, Gartenpflege, Trockenbau und individuelle Lösungen für Privatkunden und Eigentümergemeinschaften.</p>
 
-    <h2>Referenzbilder</h2>
-    <div class="bilder">
-      <img src="images/IMG_1730.jpeg" alt="Pflasterarbeiten Beispiel">
-      <img src="images/IMG_0961.jpeg" alt="Rasenpflege Beispiel">
-      <img src="images/IMG_0981.jpeg" alt="Zaunbau Beispiel">
-      <img src="images/2AB576CD-0D25-49E6-9ACD-99816ADD1410.jpeg" alt="Gartenpflege Beispiel">
-    </div>
+        <div class="two-col">
+          <div class="left">
+            <h3>Unsere Leistungen (Auszug)</h3>
+            <ul class="services">
+              <li>Hausmeisterservice & Objektbetreuung</li>
+              <li>Rasenpflege & Neuanlage, Gartenbewässerung</li>
+              <li>Pflasterarbeiten & Gehwegreinigung</li>
+              <li>Aufbau von Carports, Schuppen & Gartenhäusern</li>
+              <li>Zaunaufbau & Instandsetzungen</li>
+              <li>Streichen von Dachkästen & Holzfassaden</li>
+              <li>Trockenbau & individuelle Arbeiten auf Anfrage</li>
+            </ul>
 
-    <h2>Warum MB Dein Dienstleister?</h2>
-    <ul>
-      <li>Erfahrung und Zuverlässigkeit</li>
-      <li>Individuelle Lösungen und faire Preise</li>
-      <li>Schnelle Erreichbarkeit per Telefon & WhatsApp</li>
-    </ul>
+            <p class="small">Leistungen in Teltow, Kleinmachnow, Stahnsdorf, Berlin Süd & Umland. Für ein individuelles Angebot rufen Sie uns an oder schicken eine E-Mail.</p>
+          </div>
 
-    <p>📞 <strong><a href="tel:015236908581">01523 / 6908581</a></strong>  
-    oder schreiben Sie an <a href="mailto:info@mbdeindienstleister.de">info@mbdeindienstleister.de</a></p>
+          <aside class="right">
+            <div class="card">
+              <h3>Kontakt</h3>
+              <p style="margin:6px 0"><strong>MB Dein Dienstleister</strong><br>Inh. Maik Bielefeldt</p>
+              <p style="margin:6px 0">Florazeile, 14532 Stahnsdorf</p>
+              <p style="margin:6px 0">📞 <a href="tel:+4915236908581">01523 6908581</a><br>✉️ <a href="mailto:info@mbdeindienstleister.de">info@mbdeindienstleister.de</a></p>
+              <p style="margin:6px 0"><strong>Einzugsgebiet:</strong><br>Teltow · Kleinmachnow · Stahnsdorf · Berlin Süd & Umland</p>
+            </div>
+
+            <div style="margin-top:12px;" class="card">
+              <h3>Standort</h3>
+              <!-- Google Maps Embed (einfacher Embed via Query) -->
+              <iframe
+                src="https://www.google.com/maps?q=Florazeile+14532+Stahnsdorf&output=embed"
+                width="100%" height="200" style="border:0;border-radius:8px" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section style="margin-top:16px" class="card">
+        <h2>Referenzbilder</h2>
+        <p class="small">Beispiele aus unserer Arbeit — ersetzen Sie die Bilder später mit eigenen Fotos.</p>
+        <div class="gallery" style="margin-top:10px">
+          <img src="images/photo1.jpg" alt="Beispiel 1">
+          <img src="images/photo2.jpg" alt="Beispiel 2">
+          <img src="images/photo3.jpg" alt="Beispiel 3">
+          <img src="images/photo4.jpg" alt="Beispiel 4">
+        </div>
+      </section>
+
+      <section style="margin-top:16px" class="card">
+        <h2>Warum MB Dein Dienstleister?</h2>
+        <ul>
+          <li>Erfahrung und Zuverlässigkeit</li>
+          <li>Individuelle Lösungen und faire Preise</li>
+          <li>Schnelle Erreichbarkeit per Telefon & WhatsApp</li>
+        </ul>
+        <p class="small">Kostenlose Besichtigung und individuelles Angebot. Rufen Sie an: <a href="tel:+4915236908581">01523 6908581</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="contact-block">
+        <div>© <span id="yr"></span> MB Dein Dienstleister · Inh. Maik Bielefeldt</div>
+        <div style="margin-left:12px">📞 <a href="tel:+4915236908581">01523 6908581</a> · ✉️ <a href="mailto:info@mbdeindienstleister.de">info@mbdeindienstleister.de</a></div>
+      </div>
+    </footer>
   </div>
 
-  <footer>
-    © 2025 MB Dein Dienstleister · Inh. Maik Bielefeldt · 
-    <a href="mailto:info@mbdeindienstleister.de">info@mbdeindienstleister.de</a> · 
-    <a href="tel:015236908581">01523 / 6908581</a>
-  </footer>
-
+  <script>
+    // aktuelles Jahr
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
