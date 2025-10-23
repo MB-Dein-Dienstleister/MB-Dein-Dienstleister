@@ -159,6 +159,30 @@ main {
     padding: 16px;
   }
 }
+body {
+  background-image: url('images/dein-hintergrundbild.jpg'); /* hier dein echtes Bild einsetzen */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Hauptinhalte milchig über dem Hintergrundbild */
+main {
+  background-color: rgba(255, 255, 255, 0.75); /* leicht transparent – 0.75 = 75% sichtbar */
+  backdrop-filter: blur(3px); /* macht es schön „milchglasartig“ */
+  border-radius: 12px;
+  margin: 20px;
+  padding: 20px;
+}
+
+/* Header bleibt im Stil, aber leicht transparent, nicht deckend */
+header {
+  background-color: rgba(42, 72, 82, 0.9); /* das Blaugrün, aber leicht transparent */
+  backdrop-filter: blur(3px);
+  border-radius: 12px;
+  margin: 10px;
+  padding: 10px 20px;
+}
 </style>
   </style>
 
