@@ -40,6 +40,85 @@
     .card{background:rgba(255,255,255,055)!important;padding:14px;border-radius:10px;}
     .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
     .gallery img{width:100%;height:160px;object-fit:cover;border-radius:8px}
+    .bubble-gallery {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 60px 0;
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 120px;
+  height: 120px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.bubble img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bubble.center {
+  width: 160px;
+  height: 160px;
+  z-index: 10;
+}
+
+/* Anordnung der äußeren Bubbles */
+.bubble:nth-child(2) { top: 10%; left: 25%; }
+.bubble:nth-child(3) { top: 0%; right: 25%; }
+.bubble:nth-child(4) { bottom: 15%; left: 15%; }
+.bubble:nth-child(5) { bottom: 20%; right: 15%; }
+.bubble:nth-child(6) { top: 40%; left: 45%; }
+
+/* Effekt beim Antippen oder Hover */
+.bubble::after {
+  content: attr(data-label);
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 3px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.bubble:hover::after,
+.bubble:active::after {
+  opacity: 1;
+}
+
+/* Mobile Anpassung */
+@media (max-width: 768px) {
+  .bubble-gallery {
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .bubble {
+    position: static;
+    width: 100px;
+    height: 100px;
+  }
+  .bubble.center {
+    width: 130px;
+    height: 130px;
+  }
+}
     footer{margin-top:20px;padding:12px;text-align:center;background:#163940;color:white;border-radius:8px}
     .contact-block{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
     .contact-block a{color:white;text-decoration:none;font-weight:600}
