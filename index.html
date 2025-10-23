@@ -129,19 +129,6 @@ header {
   padding: 12px 18px;
 }
 
-/* --- Hauptinhalt auf leicht milchigem Block --- */
-main {
-  background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-radius: 14px;
-  margin: 20px auto 60px auto;
-  width: 92%;
-  max-width: 1100px;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
-
 /* --- Auf Mobilgeräten etwas mehr Rand links/rechts --- */
 @media (max-width: 720px) {
   header, main {
@@ -155,15 +142,6 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-}
-
-/* Hauptinhalte milchig über dem Hintergrundbild */
-main {
-  background-color: rgba(255, 255, 255, 0.75); /* leicht transparent – 0.75 = 75% sichtbar */
-  backdrop-filter: blur(3px); /* macht es schön „milchglasartig“ */
-  border-radius: 12px;
-  margin: 20px;
-  padding: 20px;
 }
 
 /* Header bleibt im Stil, aber leicht transparent, nicht deckend */
