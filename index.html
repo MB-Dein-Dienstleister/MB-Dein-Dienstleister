@@ -18,6 +18,12 @@ k--<!DOCTYPE html>
       --muted:#2f4b4b;
       --max-width:1000px;
     }
+    
+    /* debug - siehe, welche Boxen Platz erzeugen */
+.intro { outline: 2px dashed rgba(255,0,0,0.6); }
+.bubble-gallery { outline: 2px dashed rgba(0,128,0,0.6); }
+main { outline: 2px dashed rgba(0,0,255,0.5); }
+
     *{box-sizing:border-box}
     body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;sans-serif;color:#222;background:url("Images/IMG_5448.jpeg")no-repeat center center fixed;background-size:cover;line-height:1.45;}
     body::before{content:"";position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(255,255,255,0.55);backdrop-filter:blur(1px);z-index:-1;}
