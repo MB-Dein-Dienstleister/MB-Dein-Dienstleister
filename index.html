@@ -66,6 +66,19 @@ header nav a:hover {color: #7dbf2e;}
   object-fit: cover;
 }
 
+/* Alle anderen Bubbles (um die Haupt-Bubble herum) */
+.bubble {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  border: 3px solid #9aa86b;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: transform 0.3s ease, z-index 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1;
+}
+
 /* Haupt-Bubble */
 .main-bubble {position: absolute; width: 320px; height: 320px;  top: 45%;left: 45%;transform: translate(-50%, -50%);transform-origin: center center;border: 4px solid #9aa86b; border-radius:50%; overflow: hidden; transition: transform 0.3s ease, z-index 0.3s ease; box-shadow:0 6px 18px rgba(0,0,0,0.12); z-index: 3;
 /* Haupt-Bubble (zentriert und fixiert) */
@@ -85,18 +98,7 @@ header nav a:hover {color: #7dbf2e;}
   z-index: 6;
 }
 
-/* Alle anderen Bubbles (um die Haupt-Bubble herum) */
-.bubble {
-  position: absolute;
-  width: 160px;
-  height: 160px;
-  border: 3px solid #9aa86b;
-  border-radius: 50%;
-  overflow: hidden;
-  transition: transform 0.3s ease, z-index 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  z-index: 1;
-}
+
 
 /* Hover- oder Klick-Zustand: Bubble wird größer und rückt nach vorn */
 .bubble.active {
