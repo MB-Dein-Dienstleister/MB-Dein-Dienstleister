@@ -507,7 +507,7 @@ document.addEventListener('DOMContentLoaded', () => {
       clearTimeout(timeoutId);
       timeoutId = setTimeout(() => {
         bubble.classList.remove('active');
-        bubble.style.zIndex = '1';
+        bubble.style.zIndex = bubble.dataset.originalZ;
         activeBubble = null;
       }, 10000);
     });
