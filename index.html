@@ -37,10 +37,6 @@ header nav a:hover {color: #7dbf2e;}
     .cta{margin-left:auto;text-align:right}
     .cta a{display:inline-block;margin-left:6px;background:var(--olive);color:white;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600}
     main{margin-top:18px}
-    (/*main, section{background:none!important;box-shadow:none!important;border:none!important;}
-    .intro{background:rgba(255,255,255,0.55)!important;padding:18px;border-radius:10px;}
-    h2{color:var(--navy);margin-top:0}
-    ul.services{padding-left:18px}*/)
     ul.services li{margin:8px 0}
     .two-col{display:flex;gap:18px;flex-wrap:wrap;margin-top:18px}
     .left{flex:1;min-width:260px}
@@ -190,25 +186,6 @@ header nav a:hover {color: #7dbf2e;}
     padding: 0 10px;
   }
 }
-/* --- Hintergrundbild über gesamte Seite --- */
-(/*body {
-  margin: 0;
-  padding: 0;
-  background: url('Images/IMG_5448.jpeg');
-  font-family: Arial, sans-serif;
-}*/)
-
-/* --- Header halbtransparent mit Milchglas-Effekt --- */
-(/*header {
-  background: rgba(20, 60, 70, 0.85); /* dunkelgrün-blau mit Transparenz */
- (/* backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  border-radius: 12px;
-  margin: 16px auto;
-  width: 92%;
-  max-width: 1100px;
-  padding: 12px 18px;
-}*/)
 
 /* --- Auf Mobilgeräten etwas mehr Rand links/rechts --- */
 @media (max-width: 720px) {
@@ -324,7 +301,7 @@ header {
   "@type": "HomeAndConstructionBusiness",
   "name": "MB Dein Dienstleister (Maik Bielefeldt)",
   "image": "https://www.mbdeindienstleister.de/images/79B23FB3-2B39-4453-BAD3-74606316769C.png",
-  "telephone": "+49 1523 6908581",
+  "telephone": "+49-1523-6908581",
   "email": "info@mbdeindienstleister.de",
   "address": {
     "@type": "PostalAddress",
@@ -334,12 +311,19 @@ header {
     "addressRegion": "Brandenburg",
     "addressCountry": "DE"
   },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "52.387",
+    "longitude": "13.215"
+  },
   "areaServed": [
     "Teltow",
     "Kleinmachnow",
     "Stahnsdorf",
     "Berlin Süd",
-    "Berliner Umland"
+    "Berliner Umland",
+    "Brandenburg",
+    "Potsdam"
   ],
   "description": "Hausmeisterservice, Gartenbau & Trockenbau: Rasenpflege, Pflasterarbeiten, Carports/Schuppen, Zaunbau, Dachkasten streichen und individuelle Arbeiten."
 }
