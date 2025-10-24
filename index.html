@@ -443,6 +443,43 @@ header {
   </div>
 </section>
 
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const bubbles = document.querySelectorAll('.bubble');
+  const mainBubble = document.querySelector('.main-bubble');
+  let activeBubble = null;
+  let timeoutId = null;
+
+  bubbles.forEach(bubble => {
+    bubble.addEventListener('click', () => {
+      // Wenn derselbe Bubble nochmal geklickt wird: abbrechen
+      if (bubble === activeBubble) return;
+
+      // Wenn schon ein anderer aktiv ist: zurücksetzen
+      if (activeBubble) {
+        activeBubble.classList.remove('active');
+        activeBubble.style.zIndex = '1';
+      }
+
+      // Geklickten Bubble in die Mitte holen
+      bubble.classList.add('active');
+      bubble.style.zIndex = '5';
+      activeBubble = bubble;
+
+      // Main-Bubble im Hintergrund lassen
+      mainBubble.style.zIndex = '3';
+
+      // Nach 10 Sekunden automatisch zurück
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        bubble.classList.remove('active');
+        bubble.style.zIndex = '1';
+        activeBubble = null;
+      }, 10000);
+    });
+  });
+});
+</script>
 <!-- ================================================= -->
 <!-- WARUM MB DEIN DIENSTLEISTER -->
 <!-- ================================================= -->
