@@ -110,7 +110,11 @@ header nav a:hover {color: #7dbf2e;}
   }
 /* Vergrößert nur, ohne die Position zu beeinflussen */
 .main-bubble.active {
+  position: absolute;
+  top: 50%;
+  left: 50%
   transform: translate(-50%, -50%) scale(1.08);
+  transform-origin:  enter center;
   z-index: 6;
 }
 
