@@ -490,6 +490,8 @@ document.addEventListener('DOMContentLoaded', () => {
     bubble.dataset.originalTransform = window.getComputedStyle(bubble).transform;
 
     bubble.addEventListener('click', () => {
+      // Wenn der Main-Bubble geklickt wird, nichts machen (soll fix bleiben)
+      if (bubble === mainBubble) return;
       // Wenn derselbe Bubble nochmal geklickt wird → abbrechen
       if (bubble === activeBubble) return;
 
