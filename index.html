@@ -479,42 +479,47 @@ header {
   
   <script>
 document.addEventListener('DOMContentLoaded', () => {
-  const bubbles = document.querySelectorAll('.bubble');
+  const bubbles = document.querySelectorAll('.bubble:not(.main-bubble)'); // <-- Main-Bubble ausgeschlossen
   const mainBubble = document.querySelector('.main-bubble');
   let activeBubble = null;
   let timeoutId = null;
 
+  // Ursprüngliche Positionen speichern
   bubbles.forEach(bubble => {
-    // Main-Bubble ignorieren – bleibt fixiert in der Mitte
-    if (bubble === mainBubble) return;
-
-    // Ursprünglichen z-index speichern
     bubble.dataset.originalZ = window.getComputedStyle(bubble).zIndex;
+    bubble.dataset.originalTransform = window.getComputedStyle(bubble).transform;
 
     bubble.addEventListener('click', () => {
-      // Wenn derselbe Bubble nochmal geklickt wird: abbrechen
+      // Wenn derselbe Bubble nochmal geklickt wird → abbrechen
       if (bubble === activeBubble) return;
 
-      // Wenn schon ein anderer aktiv ist: zurücksetzen
+      // Falls ein anderer aktiv ist → zurücksetzen
       if (activeBubble) {
         activeBubble.classList.remove('active');
+        activeBubble.style.transform = activeBubble.dataset.originalTransform;
         activeBubble.style.zIndex = activeBubble.dataset.originalZ;
       }
 
-      // Geklickten Bubble in den Vordergrund holen
+      // Geklickten Bubble aktivieren
       bubble.classList.add('active');
       bubble.style.zIndex = '6';
       activeBubble = bubble;
 
-      // Main-Bubble im Hintergrund lassen
+      // Main-Bubble immer fest zentriert lassen
+      mainBubble.style.transform = 'translate(-50%, -50%)';
+      mainBubble.style.top = '50%';
+      mainBubble.style.left = '50%';
       mainBubble.style.zIndex = '3';
 
-      // Nach 10 Sekunden automatisch zurück
+      // Nach 10 Sekunden automatisch zurücksetzen
       clearTimeout(timeoutId);
       timeoutId = setTimeout(() => {
-        bubble.classList.remove('active');
-        bubble.style.zIndex = bubble.dataset.originalZ;
-        activeBubble = null;
+        if (activeBubble) {
+          activeBubble.classList.remove('active');
+          activeBubble.style.transform = activeBubble.dataset.originalTransform;
+          activeBubble.style.zIndex = activeBubble.dataset.originalZ;
+          activeBubble = null;
+        }
       }, 10000);
     });
   });
