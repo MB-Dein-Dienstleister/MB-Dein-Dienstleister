@@ -483,6 +483,34 @@ document.addEventListener('DOMContentLoaded', () => {
   const mainBubble = document.querySelector('.main-bubble');
   let activeBubble = null;
   let timeoutId = null;
+  
+  bubbles.forEach(bubble => {
+    // Main-Bubble ignorieren
+    if (bubble === mainBubble) return;
+    
+    // Ursprünglichen z-index speichern
+    bubble.dataset.originalZ = window.getComputedStyle(bubble).zIndex;
+    
+    bubble.addEventListener('click', () => {
+      if (bubble === activeBubble) return;
+      
+      if (activeBubble) {
+        activeBubble.classList.remove('active');
+        activeBubble.style.zIndex = activeBubble.dataset.originalZ;
+      }
+
+      bubble.classList.add('active');
+      bubble.style.zIndex = '6';
+      activeBubble = bubble;
+
+      // Main-Bubble bleibt zentriert, aber im Hintergrund
+      mainBubble.style.zIndex = '3';
+
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        bubble.classList.remove('active');
+        bubble.style.zIndex = bubble.dataset.originalZ;
+        activeBubble = null;
 
   bubbles.forEach(bubble => {
     bubble.addEventListener('click', () => {
