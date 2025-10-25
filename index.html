@@ -283,6 +283,54 @@ header {
     width: 90px;
     height: 90px;
   }
+  /* ===== MOBILE ANSICHT (2x3 RASTER) ===== */
+@media (max-width: 768px) {
+  .bubble-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+  }
+
+  /* Haupt-Bubble oben */
+  .main-bubble {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 0 auto;
+    z-index: 2;
+  }
+
+  /* Container für die restlichen Bubbles */
+  .bubble-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  /* Kleine Bubbles gleichmäßig im Raster */
+  .bubble {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    transform: none;
+    margin: 0;
+  }
+
+  /* Hover-/Active-Effekt bleibt */
+  .bubble.active {
+    transform: scale(1.1);
+    z-index: 5;
+  }
 }
 </style>
   </style>
