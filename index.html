@@ -331,6 +331,33 @@ header {
     transform: scale(1.1);
     z-index: 5;
   }
+  /* ==== Mobile Ansicht: 2x3 Raster für Bubbles ==== */
+@media (max-width: 768px) {
+  .bubble-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    position: static;
+    margin-top: 30px;
+  }
+
+  .bubble {
+    position: static !important;
+    width: 150px !important;
+    height: 150px !important;
+    transform: none !important;
+  }
+
+  .main-bubble {
+    grid-column: span 2;
+    position: static !important;
+    width: 220px !important;
+    height: 220px !important;
+    transform: none !important;
+    margin: 0 auto 20px auto;
+  }
 }
 </style>
   </style>
