@@ -209,6 +209,78 @@
         transform: none;
         margin: 0;
       }
+      .leistungen-und-kontakt {
+  background: #f5f5f5;
+  padding: 60px 10%;
+}
+
+.leistungen-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.leistungen-links {
+  flex: 1 1 50%;
+}
+
+.leistungen-links h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.leistungen-liste {
+  list-style: none;
+  padding: 0;
+}
+
+.leistungen-liste li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.1em;
+}
+
+.kontakt-rechts {
+  flex: 1 1 35%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.kontakt-rechts h3 {
+  margin-top: 0;
+  color: #4a6d44;
+}
+
+.kontakt-rechts a {
+  color: #4a6d44;
+  text-decoration: none;
+}
+
+.kontakt-rechts a:hover {
+  text-decoration: underline;
+}
+
+.maps-container {
+  margin-top: 40px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+  .leistungen-container {
+    flex-direction: column;
+  }
+  .leistungen-links, .kontakt-rechts {
+    width: 100%;
+  }
+}
     }
   </style>
 
