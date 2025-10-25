@@ -483,36 +483,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const mainBubble = document.querySelector('.main-bubble');
   let activeBubble = null;
   let timeoutId = null;
-  
+
   bubbles.forEach(bubble => {
-    // Main-Bubble ignorieren
+    // Main-Bubble ignorieren – bleibt fixiert in der Mitte
     if (bubble === mainBubble) return;
-    
+
     // Ursprünglichen z-index speichern
     bubble.dataset.originalZ = window.getComputedStyle(bubble).zIndex;
-    
-    bubble.addEventListener('click', () => {
-      if (bubble === activeBubble) return;
-      
-      if (activeBubble) {
-        activeBubble.classList.remove('active');
-        activeBubble.style.zIndex = activeBubble.dataset.originalZ;
-      }
 
-      bubble.classList.add('active');
-      bubble.style.zIndex = '6';
-      activeBubble = bubble;
-
-      // Main-Bubble bleibt zentriert, aber im Hintergrund
-      mainBubble.style.zIndex = '3';
-
-      clearTimeout(timeoutId);
-      timeoutId = setTimeout(() => {
-        bubble.classList.remove('active');
-        bubble.style.zIndex = bubble.dataset.originalZ;
-        activeBubble = null;
-
-  bubbles.forEach(bubble => {
     bubble.addEventListener('click', () => {
       // Wenn derselbe Bubble nochmal geklickt wird: abbrechen
       if (bubble === activeBubble) return;
@@ -520,12 +498,12 @@ document.addEventListener('DOMContentLoaded', () => {
       // Wenn schon ein anderer aktiv ist: zurücksetzen
       if (activeBubble) {
         activeBubble.classList.remove('active');
-        activeBubble.style.zIndex = '1';
+        activeBubble.style.zIndex = activeBubble.dataset.originalZ;
       }
 
-      // Geklickten Bubble in die Mitte holen
+      // Geklickten Bubble in den Vordergrund holen
       bubble.classList.add('active');
-      bubble.style.zIndex = '5';
+      bubble.style.zIndex = '6';
       activeBubble = bubble;
 
       // Main-Bubble im Hintergrund lassen
