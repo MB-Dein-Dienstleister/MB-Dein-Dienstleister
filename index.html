@@ -115,31 +115,27 @@ dB<!DOCTYPE html>
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
-    /* =========================
-   BUBBLE GALLERY (Fix)
-========================= */
+    /* =============================
+   BUBBLE GALLERY – FINAL FIX
+   ============================= */
 .bubble-gallery {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 30px;
-  padding: 40px 0;
   width: 100%;
-  z-index: 1;
+  height: 600px;
+  margin: 3rem auto;
 }
 
+/* Allgemeine Bubbles */
 .bubble {
   position: absolute;
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
+  border: 3px solid #9aa86b;
   border-radius: 50%;
   overflow: hidden;
-  border: 3px solid #9aa86b;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, z-index 0.3s ease;
   cursor: pointer;
+  transition: transform 0.3s ease, z-index 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   z-index: 1;
 }
 
@@ -150,66 +146,85 @@ dB<!DOCTYPE html>
   border-radius: 50%;
 }
 
-/* Hover-Effekt */
-.bubble:hover {
-  transform: scale(1.3);
-  z-index: 10; /* Kommt in den Vordergrund */
+/* Haupt-Bubble in der Mitte */
+.main-bubble {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 4px solid #9aa86b;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  z-index: 3;
+  pointer-events: none;
 }
 
-/* MAIN BUBBLE fixiert und zentriert */
-position: absolute;
-      width: 320px;
-      height: 320px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      border: 4px solid var(--olive);
-      border-radius: 50%;
-      overflow: hidden;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-      z-index: 3;
-      pointer-events: none;
-    }
+/* Hover-Effekt */
+.bubble:hover {
+  transform: scale(1.15);
+  z-index: 10;
+  box-shadow: 0 0 15px rgba(105,183,63,0.6);
+}
 
-/* === Mobile Anpassung === */
-    @media (max-width: 480px) {
-      header {flex-direction: column; text-align: center;}
-      .two-col {flex-direction: column;}
-      .bubble-gallery {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-        justify-items: center;
-        align-items: center;
-        height: auto;
-      }
-      .bubble, .main-bubble {
-        position: static;
-        width: 140px !important;
-        height: 140px !important;
-        transform: none;
-      }
-      .main-bubble {
-        grid-column: span 2;
-        width: 200px !important;
-        height: 200px !important;
-      }
-      
-/*
-@media (max-width: 1024px) {
-   .bubble-gallery {
+/* Positionen der kleinen Bubbles */
+.b1 { top: 10%; left: 20%; width: 210px; height: 210px; }
+.b2 { top: 10%; right: 15%; width: 250px; height: 250px; }
+.b3 { bottom: 20%; left: 10%; width: 240px; height: 240px; }
+.b4 { bottom: 25%; right: 20%; width: 230px; height: 230px; }
+.b5 { top: 65%; right: 35%; width: 200px; height: 200px; }
+.b6 { bottom: 10%; left: 30%; width: 180px; height: 180px; }
+
+/* Hover-Texte */
+.bubble::after {
+  content: attr(data-text);
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(105,183,63,0.9);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+.bubble:hover::after { opacity: 1; }
+
+/* ===== MOBILE ANSICHT (unter 768px) ===== */
+@media (max-width: 768px) {
+  .bubble-gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+    gap: 20px;
     justify-items: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 40px auto;
+    height: auto;
   }
 
   .main-bubble {
+    position: static;
     grid-column: span 2;
-    justify-self: center;
+    width: 200px;
+    height: 200px;
+    transform: none;
+    margin-bottom: 10px;
+  }
+
+  .bubble {
+    position: static;
+    width: 140px;
+    height: 140px;
+    transform: none;
   }
 }
-*/ 
 
     .b1 {position: absolute; width: 220px; height: 220px; top: 0%; left: 17%;z-index:3;}
     .b2 {position: absolute; width: 250px; height: 250px; top: 8%; right: 15%;z-index:2;}
