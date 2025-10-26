@@ -166,6 +166,30 @@
   z-index: 5;
 }
 
+/* === Mobile Anpassung === */
+    @media (max-width: 768px) {
+      header {flex-direction: column; text-align: center;}
+      .two-col {flex-direction: column;}
+      .bubble-gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        justify-items: center;
+        align-items: center;
+        height: auto;
+      }
+      .bubble, .main-bubble {
+        position: static;
+        width: 140px !important;
+        height: 140px !important;
+        transform: none;
+      }
+      .main-bubble {
+        grid-column: span 2;
+        width: 200px !important;
+        height: 200px !important;
+      }
+      
 /* Mobile Ansicht: 2x3 Raster */
 @media (max-width: 768px) {
   .bubble-gallery {
@@ -230,29 +254,7 @@
       border-radius: 8px;
     }
 
-    /* === Mobile Anpassung === */
-    @media (max-width: 768px) {
-      header {flex-direction: column; text-align: center;}
-      .two-col {flex-direction: column;}
-      .bubble-gallery {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-        justify-items: center;
-        align-items: center;
-        height: auto;
-      }
-      .bubble, .main-bubble {
-        position: static;
-        width: 140px !important;
-        height: 140px !important;
-        transform: none;
-      }
-      .main-bubble {
-        grid-column: span 2;
-        width: 200px !important;
-        height: 200px !important;
-      }
+    
     }
   </style>
 </head>
