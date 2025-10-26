@@ -195,6 +195,7 @@
 }
 .bubble:hover::after { opacity: 1; }
 
+.smal-bubble {
    .b1 {position: absolute; width: 220px; height: 220px; top: 0%; left: 17%;z-index:3;}
     .b2 {position: absolute; width: 250px; height: 250px; top: 8%; right: 15%;z-index:2;}
     .b3 {position: absolute; width: 280px; height: 280px; bottom: 20%; left: 7%;z-index:1;}
@@ -230,7 +231,7 @@
 
     .bubble:hover::after {opacity: 1;}
 /* ===== MOBILE ANSICHT (unter 768px) ===== */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .bubble-gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
