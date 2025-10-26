@@ -203,6 +203,32 @@
     .b6 {position: absolute; width: 210px; height: 180px; bottom: 3%; left: 35%;z-index:4;}
 
 }
+
+ 
+
+    .bubble:hover {
+      transform: scale(1.15);
+      z-index: 10;
+      box-shadow: 0 0 15px rgba(105,183,63,0.6);
+    }
+
+    .bubble::after {
+      content: attr(data-text);
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(105,183,63,0.9);
+      color: white;
+      padding: 4px 10px;
+      border-radius: 5px;
+      font-size: 0.85rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .bubble:hover::after {opacity: 1;}
 /* ===== MOBILE ANSICHT (unter 768px) ===== */
 @media (max-width: 768px) {
   .bubble-gallery {
@@ -233,32 +259,6 @@
     transform: none;
   }
 }
-
- 
-
-    .bubble:hover {
-      transform: scale(1.15);
-      z-index: 10;
-      box-shadow: 0 0 15px rgba(105,183,63,0.6);
-    }
-
-    .bubble::after {
-      content: attr(data-text);
-      position: absolute;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: rgba(105,183,63,0.9);
-      color: white;
-      padding: 4px 10px;
-      border-radius: 5px;
-      font-size: 0.85rem;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      white-space: nowrap;
-    }
-
-    .bubble:hover::after {opacity: 1;}
 
     /* === Warum MB === */
     .why-mb {
