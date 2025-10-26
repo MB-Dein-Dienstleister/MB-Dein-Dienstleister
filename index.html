@@ -412,5 +412,52 @@
   </div>
 
   <script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const bubbles = document.querySelectorAll('.bubble:not(.main-bubble)');
+  const mainBubble = document.querySelector('.main-bubble');
+  let activeBubble = null;
+  let timeoutId = null;
+
+  bubbles.forEach(bubble => {
+    // Ursprüngliche Zustände merken
+    bubble.dataset.originalZ = window.getComputedStyle(bubble).zIndex;
+    bubble.dataset.originalTransform = window.getComputedStyle(bubble).transform;
+
+    bubble.addEventListener('click', () => {
+      if (bubble === mainBubble) return; // Hauptbubble ignorieren
+
+      // Falls ein anderer aktiv ist → zurücksetzen
+      if (activeBubble && activeBubble !== bubble) {
+        activeBubble.classList.remove('active');
+        activeBubble.style.transform = activeBubble.dataset.originalTransform;
+        activeBubble.style.zIndex = activeBubble.dataset.originalZ;
+      }
+
+      // Neue Bubble aktivieren
+      bubble.classList.add('active');
+      bubble.style.zIndex = '6';
+      activeBubble = bubble;
+
+      // Main-Bubble bleibt immer in der Mitte
+      mainBubble.style.transform = 'translate(-50%, -50%)';
+      mainBubble.style.top = '50%';
+      mainBubble.style.left = '50%';
+      mainBubble.style.zIndex = '3';
+
+      // Nach 10 Sekunden automatisch zurücksetzen
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        if (activeBubble) {
+          activeBubble.classList.remove('active');
+          activeBubble.style.transform = activeBubble.dataset.originalTransform;
+          activeBubble.style.zIndex = activeBubble.dataset.originalZ;
+          activeBubble = null;
+        }
+      }, 10000); // 10 Sekunden
+    });
+  });
+});
+</script>
 </body>
 </html>
