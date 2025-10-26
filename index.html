@@ -248,6 +248,71 @@
     height: 140px;
     transform: none;
   }
+  /* ==== Mobile Ansicht unter 768px (inkl. Header & Layout) ==== */
+@media (max-width: 768px) {
+  /* Allgemeines Layout */
+  body, main, section, .content-wrapper {
+    display: block !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+  }
+
+  section, .content-box, .kontakt, .standort, .why-mb {
+    width: 90% !important;
+    margin: 0 auto 20px auto !important;
+  }
+
+  .kontakt, .standort {
+    display: block !important;
+  }
+
+  .header, .top-bar, .intro-text {
+    text-align: center !important;
+  }
+
+  /* Header-Bereich */
+  header, .header, .top-header {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .header img, .logo img {
+    width: 120px !important; /* Logo etwas kleiner */
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .header h1, .header h2, .header p {
+    margin: 4px 0 !important;
+    text-align: center !important;
+  }
+
+  /* Buttons im Header */
+  .header .kontakt-button,
+  .header .cta-button,
+  .header a[href*="tel"],
+  .header a[href*="01523"] {
+    display: inline-block;
+    background-color: #69b73f;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    margin-top: 10px;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .header .kontakt-button:hover,
+  .header .cta-button:hover {
+    background-color: #558f31;
+  }
 } /* Ende Mobile Ansicht unter 768px */
 
 
