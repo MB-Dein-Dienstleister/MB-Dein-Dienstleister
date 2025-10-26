@@ -161,7 +161,6 @@ mh<!DOCTYPE html>
 .main-bubble {
   width: 160px;
   height: 160px;
-  transform: none;
   margin: 0 auto;
   display: block;
   z-index: 5;
@@ -181,15 +180,16 @@ mh<!DOCTYPE html>
     justify-self: center;
   }
 
-    .b1 {width: 220px; height: 220px; top: 0%; left: 17%;z-index:4;}
-    .b2 {width: 250px; height: 250px; top: 8%; right: 15%;}
-    .b3 {width: 280px; height: 280px; bottom: 20%; left: 7%;}
-    .b4 {width: 230px; height: 230px; bottom: 25%; right: 20%;}
-    .b5 {width: 210px; height: 210px; top: 60%; right: 30%;}
-    .b6 {width: 180px; height: 180px; bottom: 10%; left: 25%;}
+    .b1 {width: 220px; height: 220px; top: 0%; left: 17%;z-index:3;}
+    .b2 {width: 250px; height: 250px; top: 8%; right: 15%;z-index:2;}
+    .b3 {width: 280px; height: 280px; bottom: 20%; left: 7%;z-index:1;}
+    .b4 {width: 230px; height: 230px; bottom: 25%; right: 20%;z-index:2;}
+    .b5 {width: 210px; height: 210px; top: 60%; right: 30%;z-index:3;}
+    .b6 {width: 180px; height: 180px; bottom: 10%; left: 25%;z-index:4;}
 
     .bubble:hover {
       transform: scale(1.15);
+      z-index: 10;
       box-shadow: 0 0 15px rgba(105,183,63,0.6);
     }
 
