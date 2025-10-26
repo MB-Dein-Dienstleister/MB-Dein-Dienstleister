@@ -149,11 +149,11 @@
 /* Haupt-Bubble in der Mitte */
 .main-bubble {
   position: absolute;
-  width: 335px;
-  height: 335px;
+  width: 330px;
+  height: 330px;
   top: 45%;
-  left: 44%;
-  transform: translate(-45%, -44%);
+  left: 43%;
+  transform: translate(-45%, -43%);
   border: 4px solid #9aa86b;
   border-radius: 50%;
   overflow: hidden;
@@ -312,6 +312,13 @@
   .header .kontakt-button:hover,
   .header .cta-button:hover {
     background-color: #558f31;
+  }
+    /* Kontakt- und Standortbox kompakter */
+  .kontakt, .standort {
+    width: 85% !important;
+    max-width: 400px;
+    margin: 0 auto 20px auto !important;
+    box-sizing: border-box;
   }
 } /* Ende Mobile Ansicht unter 768px */
 
