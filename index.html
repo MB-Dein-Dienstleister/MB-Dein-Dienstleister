@@ -339,7 +339,24 @@
         color: white;
         text-align: center;
       }
-    }
+      
+    /* --- Impressum & Datenschutz (Footer-Bereich) --- */
+.footer-links {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 8px;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+}
   </style>
 </head>
 
@@ -428,6 +445,10 @@
 
     <footer>
       © <span id="year"></span> MB Dein Dienstleister · Inh. Maik Bielefeldt
+      <div class="footer-links">
+  <a href="impressum.html">Impressum</a> |
+  <a href="datenschutz.html">Datenschutzerklärung</a>
+</div>
     </footer>
   </div>
 
