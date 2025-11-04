@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Referenzen | MB Dein Dienstleister</title>
+  <meta name="description" content="Unsere Referenzen – Hausmeisterservice, Gartenpflege, Pflasterarbeiten und Renovierungen in Stahnsdorf, Teltow und Umgebung.">
+  <link rel="stylesheet" href="style.css"> <!-- Falls du eine zentrale CSS-Datei hast -->
+  <style>
+    /* === Grundlayout (gleich wie Startseite) === */
+    body {
+      margin: 0;
+      font-family: "Open Sans", Arial, sans-serif;
+      color: #fff;
+      background: url('bilder/hintergrund.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.6);
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+      color: #fff;
+    }
+
+    header p {
+      color: #ccc;
+      margin-top: 10px;
+      font-size: 1.1em;
+    }
+
+    main {
+      padding: 60px 20px;
+      background: rgba(0, 0, 0, 0.55);
+      min-height: 80vh;
+    }
+
+    /* === Galerie-Grid === */
+    .gallery-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-gap: 20px;
+    }
+
+    .gallery-container img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery-container img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    }
+
+    /* === Lightbox === */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .lightbox-content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 900px;
+      border-radius: 10px;
+    }
+
+    .lightbox-caption {
+      text-align: center;
+      color: #ccc;
+      margin-top: 15px;
+      font-size: 1.1em;
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      color: #fff;
+      font-size: 40px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .close:hover {
+      color: #aaa;
+    }
+
+    /* === Zurück-Link === */
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 50px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    /* === Footer === */
+    footer {
+      background: rgba(0, 0, 0, 0.7);
+      text-align: center;
+      padding: 20px;
+      color: #ccc;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📸 Unsere Referenzen</h1>
+    <p>Einblicke in unsere Arbeiten – Gartenpflege, Pflasterarbeiten & Renovierungen</p>
+  </header>
+
+  <main>
+    <div class="gallery-container">
+      <img src="bilder/referenz1.jpg" alt="Gartenpflege Projekt" onclick="openLightbox(this)">
+      <img src="bilder/referenz2.jpg" alt="Pflasterarbeiten Einfahrt" onclick="openLightbox(this)">
+      <img src="bilder/referenz3.jpg" alt="Zaunbau" onclick="openLightbox(this)">
+      <img src="bilder/referenz4.jpg" alt="Renovierung Innenbereich" onclick="openLightbox(this)">
+      <img src="bilder/referenz5.jpg" alt="Rasenpflege Großfläche" onclick="openLightbox(this)">
+      <img src="bilder/referenz6.jpg" alt="Hausmeisterservice Objektpflege" onclick="openLightbox(this)">
+    </div>
+
+    <a href="index.html" class="back-link">← Zurück zur Startseite</a>
+  </main>
+
+  <footer>
+    <p>© 2025 MB Dein Dienstleister – Hausmeisterservice & Gartenpflege | Stahnsdorf, Teltow & Umgebung</p>
+  </footer>
+
+  <!-- === Lightbox-Funktion === -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+  </div>
+
+  <script>
+    function openLightbox(element) {
+      document.getElementById('lightbox').style.display = 'block';
+      document.getElementById('lightbox-img').src = element.src;
+      document.getElementById('lightbox-caption').innerText = element.alt;
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
