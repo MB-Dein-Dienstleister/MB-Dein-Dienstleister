@@ -14,8 +14,74 @@
       color: #fff;
       background: url('Images/Hintergrund.jpeg') no-repeat center center fixed;
       background-size: cover;
+      color: #222;
+      line-height: 1.5;
     }
 
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(255,255,255,0.55);
+      backdrop-filter: blur(1px);
+      z-index: -1;
+    }
+
+    .wrap {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 20px;
+      background: rgba(255,255,255,0.55);
+      border-radius: 10px;
+      backdrop-filter: blur(6px);
+    }
+
+    /* =============================
+       HEADER
+    ============================= */
+    header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 18px;
+      border-radius: 10px;
+      background: linear-gradient(90deg, rgba(18,49,63,0.85), rgba(18,49,63,0.75));
+      color: white;
+    }
+
+    .logo img {
+      height: 150px;
+      width: auto;
+    }
+
+    .hero-text h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      color: var(--beige);
+    }
+
+    .hero-text p {
+      margin: 4px 0;
+      color: var(--beige);
+    }
+
+    .cta {
+      margin-left: auto;
+      text-align: right;
+    }
+
+    .cta a {
+      display: inline-block;
+      background: var(--olive);
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    main { margin-top: 20px; }
     header {
       background: rgba(0, 0, 0, 0.6);
       text-align: center;
