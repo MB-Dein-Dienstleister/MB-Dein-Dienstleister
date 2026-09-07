@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- === SEO & Social Media Optimierung === -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Titel & Beschreibung für Google -->
+  <title>MB Dein Dienstleister – Hausmeisterservice & Gartenbau in Stahnsdorf</title>
+  <meta name="description" content="MB Dein Dienstleister (Inh. Maik Bielefeldt) – Zuverlässiger Hausmeisterservice, Gartenpflege, Pflasterarbeiten, Trockenbau & Aufbau von Carports in Stahnsdorf, Teltow, Kleinmachnow & Berlin Süd.">
+  <meta name="keywords" content="Hausmeisterservice Stahnsdorf, Gartenbau, Gartenpflege, Pflasterarbeiten, Fenster putzen, Carport Aufbau, Trockenbau, MB Dein Dienstleister">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.mbdeindienstleister.de/">
+
+  <!-- Open Graph (für Facebook, WhatsApp, LinkedIn) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="MB Dein Dienstleister – Hausmeisterservice & Gartenbau in Stahnsdorf">
+  <meta property="og:description" content="Zuverlässig, vielseitig, persönlich – Hausmeisterservice, Gartenpflege & Pflasterarbeiten von MB Dein Dienstleister in Stahnsdorf und Umgebung.">
+  <meta property="og:image" content="https://www.mbdeindienstleister.de/Images/Logo%20Maik%20Final.png">
+  <meta property="og:url" content="https://www.mbdeindienstleister.de/">
+  <meta property="og:site_name" content="MB Dein Dienstleister">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MB Dein Dienstleister – Hausmeisterservice & Gartenbau">
+  <meta name="twitter:description" content="Hausmeisterservice, Gartenpflege & Pflasterarbeiten in Stahnsdorf und Umgebung.">
+  <meta name="twitter:image" content="https://www.mbdeindienstleister.de/Images/Logo%20Maik%20Final.png">
+
+  <!-- Lokales Unternehmen / Strukturierte Daten -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "MB Dein Dienstleister",
+    "image": "https://www.mbdeindienstleister.de/Images/Logo%20Maik%20Final.png",
+    "url": "https://www.mbdeindienstleister.de/",
+    "telephone": "+4915236908581",
+    "email": "info@mbdeindienstleister.de",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Florazeile",
+      "postalCode": "14532",
+      "addressLocality": "Stahnsdorf",
+      "addressCountry": "DE"
+    },
+    "openingHours": "Mo-Sa 08:00-20:00",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "52.373", 
+      "longitude": "13.229"
+    },
+    "sameAs": [
+      "https://www.google.com/maps?q=MB+Dein+Dienstleister+Stahnsdorf"
+    ],
+    "description": "MB Dein Dienstleister (Inh. Maik Bielefeldt) – Zuverlässiger Hausmeisterservice, Gartenpflege, Pflasterarbeiten, Trockenbau & Aufbau von Carports in Stahnsdorf, Teltow, Kleinmachnow & Berlin Süd."
+  }
+  </script>
+<!-- === Ende SEO & Social Media Optimierung === -->
+
+  <style>
+    /* =============================
+       GRUNDSTIL
+    ============================= */
+    :root {
+      --navy: #12313f;
+      --olive: #9aa86b;
+      --beige: #efe6d0;
+      --max-width: 1000px;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, Arial, sans-serif;
+      background: url("/Images/Hintergrund.jpeg") no-repeat center center fixed;
+      background-size: cover;
+      color: #222;
+      line-height: 1.5;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(255,255,255,0.55);
+      backdrop-filter: blur(1px);
+      z-index: -1;
+    }
+
+    .wrap {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 20px;
+      background: rgba(255,255,255,0.55);
+      border-radius: 10px;
+      backdrop-filter: blur(6px);
+    }
+
+    /* =============================
+       HEADER
+    ============================= */
+    header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 18px;
+      border-radius: 10px;
+      background: linear-gradient(90deg, rgba(18,49,63,0.85), rgba(18,49,63,0.75));
+      color: white;
+    }
+
+    .logo img {
+      height: 150px;
+      width: auto;
+    }
+
+    .hero-text h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      color: var(--beige);
+    }
+
+    .hero-text p {
+      margin: 4px 0;
+      color: var(--beige);
+    }
+
+    .cta {
+      margin-left: auto;
+      text-align: right;
+    }
+
+    .cta a {
+      display: inline-block;
+      background: var(--olive);
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    main { margin-top: 20px; }
+
+    /* =============================
+       ZWEI-SPALTEN-LAYOUT
+    ============================= */
+    .two-col {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .left {
+      flex: 1;
+      min-width: 260px;
+    }
+
+    .right {
+      flex: 0 0 320px;
+      min-width: 280px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.85);
+      padding: 14px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    /* =============================
+       BUBBLE-GALERIE
+    ============================= */
+    .bubble-gallery {
+      position: relative;
+      width: 100%;
+      height: 600px;
+      margin: 3rem auto;
+    }
+
+    .bubble {
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border: 3px solid #9aa86b;
+      border-radius: 50%;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s ease, z-index 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      z-index: 1;
+    }
+
+    .bubble img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .main-bubble {
+      position: absolute;
+      width: 330px;
+      height: 330px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 4px solid #9aa86b;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    .bubble:hover {
+      transform: scale(1.15);
+      z-index: 10;
+      box-shadow: 0 0 15px rgba(105,183,63,0.6);
+    }
+
+    .bubble::after {
+      content: attr(data-text);
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(105,183,63,0.9);
+      color: white;
+      padding: 4px 10px;
+      border-radius: 5px;
+      font-size: 0.85rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .bubble:hover::after { opacity: 1; }
+
+    /* Positionen der Bubbles */
+    .bubble-referenzen {
+  position: absolute;
+  top: -10%; /* leicht über der Hauptbubble */
+  left: 43%; /* kannst du anpassen */
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  background-color: #f5f0e6;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index:2;
+}
+
+.bubble-referenzen:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.bubble-referenzen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bubble-referenzen .bubble-text {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.3);
+  padding: 5px;
+}
+    .b1 { top: 0%; left: 21%; width: 225px; height: 225px; z-index:3; }
+    .b2 { top: 1%; right: 10%; width: 280px; height: 280px; z-index:2; }
+    .b3 { bottom: 20%; left: 12%; width: 280px; height: 280px; z-index:1; }
+    .b4 { bottom: 25%; right: 8%; width: 260px; height: 260px; z-index:2; }
+    .b5 { top: 60%; right: 20%; width: 240px; height: 240px; z-index:3; }
+    .b6 { bottom: -7%; left: 32%; width: 240px; height: 240px; z-index:2; }
+
+    /* =============================
+       WARUM MB SEKTION
+    ============================= */
+    .why-mb {
+      background: #f8f8f8;
+      border-radius: 10px;
+      padding: 2rem;
+      margin: 3rem auto;
+      max-width: 900px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    /* =============================
+       FOOTER
+    ============================= */
+    footer {
+      margin-top: 20px;
+      padding: 20px;
+      text-align: center;
+      background: #163940;
+      color: white;
+      border-radius: 10px;
+    }
+
+    /* =============================
+       MOBILE / TABLET ANSICHT
+    ============================= */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .logo img {
+        width: 120px;
+        height: auto;
+      }
+
+      .cta {
+        margin: 10px 0 0 0;
+        text-align: center;
+      }
+
+      .bubble-gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        justify-items: center;
+        align-items: center;
+        width: 100%;
+        max-width: 400px;
+        margin: 40px auto;
+        height: auto;
+      }
+
+      .bubble, .main-bubble {
+        position: static;
+        width: 140px;
+        height: 140px;
+        transform: none;
+      }
+
+      .main-bubble {
+        grid-column: span 2;
+        width: 200px;
+        height: 200px;
+        margin-bottom: 10px;
+      }
+
+      .kontakt, .standort {
+        width: 90% !important;
+        max-width: 360px;
+        margin: 0 auto 20px auto;
+        padding: 15px;
+      }
+
+      footer {
+        width: 100%;
+        border-radius: 10px;
+        background-color: #163940;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      footer * {
+        color: white;
+        text-align: center;
+      }
+}
+    /* --- Impressum & Datenschutz (Footer-Bereich) --- */
+.footer-links {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 8px;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">
+        <img src="/Images/Logo Maik Final.png" alt="MB Dein Dienstleister Logo" loading="lazy">
+      </div>
+      <div class="hero-text">
+        <h1>MB Dein Dienstleister</h1>
+        <p><strong>Inh. Maik Bielefeldt</strong> — Zuverlässig. Vielseitig. Persönlich.</p>
+        <p>Stahnsdorf • Teltow • Kleinmachnow • Potsdam • Berlin Süd & Umland</p>
+      </div>
+      <div class="cta">
+        <a href="tel:+4915236908581">Termin vereinbaren --> 01523/6908581</a><br>
+        <a href="mailto:info@mbdeindienstleister.de" style="background:transparent;border:2px solid white;margin-top:6px;">Termin vereinbaren --> E-Mail</a>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <h2>Wir kümmern uns rund ums Haus & Ihren Garten</h2>
+        <p>Ob gepflegter Garten, saubere Dachrinnen, Pflasterarbeiten oder der Aufbau eines Carports — bei <strong>MB Dein Dienstleister</strong> sind Sie in besten Händen.</p>
+
+        <div class="two-col">
+          <div class="left">
+            <h3>Unsere Leistungen (Auszug)</h3>
+            <ul class="services">
+              <li>Hausmeisterservice & Objektbetreuung</li>
+              <li>Rasenpflege & Neuanlage</li>
+              <li>Installation von Mährobotern</li>
+              <li>Installation von Bewässerungsanlagen</li>
+              <li>Pflasterarbeiten & Gartengestaltung</li>
+              <li>Aufbau von Carports & Gartenhäusern</li>
+              <li>Zaunaufbau & Instandsetzung</li>
+              <li>Streichen von Dachkästen & Holzfassaden</li>
+              <li>Trockenbau</li>
+              <li>Fliesen - Reparaturen</li>
+              <li>Fenster putzen</li>
+              <li>Individuelle Arbeiten auf Anfrage</li>
+            </ul>
+          </div>
+          
+
+          <aside class="right">
+            <div class="card kontakt">
+              <h3>Kontakt</h3>
+              <p><strong>MB Dein Dienstleister</strong><br>Inh. Maik Bielefeldt<br>14532 Stahnsdorf</p>
+              <p>📞 <a href="tel:+4915236908581">01523/6908581</a><br>✉️ <a href="mailto:info@mbdeindienstleister.de">info@mbdeindienstleister.de</a></p>
+              <p><strong>Region:</strong><br>Teltow · Kleinmachnow · Stahnsdorf · Potsdam · Berlin Süd & Umland</p>
+            </div>
+
+            <div class="card standort">
+              <h3>Standort</h3>
+              <iframe src="https://www.google.com/maps?q=14532+Stahnsdorf&output=embed"
+                width="100%" height="200" style="border:0;border-radius:8px;"
+                loading="lazy"></iframe>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="referenzen">
+        <h2></h2>
+        <div class="bubble-gallery">        
+          <div class="bubble main-bubble" data-text="Rasenpflege"><img src="/Images/Rasenpflege.jpeg" loading="lazy"></div>
+          <div class="bubble b1" data-text="Beetgestaltung"><img src="/Images/Beetgestaltung.jpeg" loading="lazy"></div>
+          <div class="bubble b2" data-text="Heckenpflege"><img src="/Images/Heckenpflege.jpeg" loading="lazy"></div>
+          <div class="bubble b3" data-text="Trockenbau"><img src="/Images/Trockenbau.jpeg" loading="lazy"></div>
+          <div class="bubble b4" data-text="Bewässerung"><img src="/Images/Neueste Fotos anzeigen.png" loading="lazy"></div>
+          <div class="bubble b5" data-text="Pflasterarbeiten"><img src="/Images/IMG_1730.jpeg" loading="lazy"></div>
+          <div class="bubble b6" data-text="Terrassenbau"><img src="/Images/Pflasterarbeiten.jpeg" loading="lazy"></div>
+<!-- Neue Bubble für Referenzen -->
+<div class="bubble-referenzen" onclick="window.location.href='referenzen.html'">
+  <img src="/Images/Werkbank-Bubble.PNG" alt="Referenzarbeiten">
+  <div class="bubble-text">
+    <p>🔧 Weitere Projekte & Bilder ansehen</p>
+    <span class="arrow">➜</span>
+  </div>        </div>
+      </section>
+      
+
+      <section class="why-mb">
+        <h2>Warum MB Dein Dienstleister?</h2>
+        <ul>
+          <li>Erfahrung & Zuverlässigkeit</li>
+          <li>Persönlich & flexibel</li>
+          <li>Individuelle Lösungen & faire Preise</li>
+          <li>Schnelle Erreichbarkeit</li>
+          <li>Saubere und fachgerechte Arbeit</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="year"></span> MB Dein Dienstleister · Inh. Maik Bielefeldt
+      <div class="footer-links">
+  <a href="impressum.html">Impressum</a> |
+  <a href="datenschutz.html">Datenschutzerklärung</a>
+</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const bubbles = document.querySelectorAll('.bubble:not(.main-bubble)');
+      const mainBubble = document.querySelector('.main-bubble');
+      let activeBubble = null;
+      let timeoutId = null;
+
+      bubbles.forEach(bubble => {
+        bubble.dataset.originalZ = window.getComputedStyle(bubble).zIndex;
+        bubble.dataset.originalTransform = window.getComputedStyle(bubble).transform;
+
+        bubble.addEventListener('click', () => {
+          if (bubble === mainBubble) return;
+
+          if (activeBubble && activeBubble !== bubble) {
+            activeBubble.classList.remove('active');
+            activeBubble.style.transform = activeBubble.dataset.originalTransform;
+            activeBubble.style.zIndex = activeBubble.dataset.originalZ;
+          }
+
+          bubble.classList.add('active');
+          bubble.style.zIndex = '6';
+          activeBubble = bubble;
+
+          clearTimeout(timeoutId);
+          timeoutId = setTimeout(() => {
+            if (activeBubble) {
+              activeBubble.classList.remove('active');
+              activeBubble.style.transform = activeBubble.dataset.originalTransform;
+              activeBubble.style.zIndex = activeBubble.dataset.originalZ;
+              activeBubble = null;
+            }
+          }, 10000);
+        });
+      });
+    });
+  </script>
+</body>
