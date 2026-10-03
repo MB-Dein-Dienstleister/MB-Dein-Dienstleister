@@ -292,7 +292,9 @@ header{
   z-index:1;
   min-height:500px;
   overflow:hidden;
-  background:#0a2743;
+  /* Gleicher Grundton wie der komplette Hero: So bleibt am Bildrand
+     keine eigene rechteckige Bildflaeche sichtbar. */
+  background:#071c33;
   transform:translateX(-42px);
   width:calc(100% + 42px);
 }
@@ -303,6 +305,14 @@ header{
   height:100%;
   object-fit:cover;
   object-position:center center;
+  /* Das Treppenmotiv laeuft auf beiden Seiten weich in den
+     dunkelblauen Hero-Hintergrund aus (inklusive Safari). */
+  -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 13%,#000 86%,transparent 100%);
+  mask-image:linear-gradient(90deg,transparent 0%,#000 13%,#000 86%,transparent 100%);
+  -webkit-mask-repeat:no-repeat;
+  mask-repeat:no-repeat;
+  -webkit-mask-size:100% 100%;
+  mask-size:100% 100%;
 }
 .hero-right::before{
   content:"";
@@ -686,6 +696,10 @@ footer{
   .hero-right{
     transform:none;
     width:100%;
+  }
+  .hero-right>img{
+    -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 5%,#000 95%,transparent 100%);
+    mask-image:linear-gradient(90deg,transparent 0%,#000 5%,#000 95%,transparent 100%);
   }
   .hero-right::before{
     background:
