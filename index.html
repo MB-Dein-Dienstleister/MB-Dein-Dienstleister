@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- MB HERO-FIX V4 – weich auslaufendes Bild direkt eingebettet -->
+<!-- MB HERO-FIX V5 – linker Desktop-Übergang reicht diagonal in die Textfläche -->
 <html lang="de">
 <head>
 <meta charset="utf-8">
@@ -672,6 +672,20 @@ footer{
     grid-template-columns:repeat(4,1fr);
     border-left:0;
     border-top:1px solid var(--line);
+  }
+}
+
+/* Desktop: Der transparente linke Bildsaum muss über die Spaltengrenze hinaus
+   in den blauen Hero hineinragen. Text und Schaltflächen bleiben darüber. */
+@media(min-width:1101px){
+  .hero-left{z-index:auto}
+  .hero-left::before{z-index:0}
+  .hero-left::after{z-index:1}
+  .hero-copy{z-index:6}
+  .hero-right{
+    z-index:3;
+    left:-240px;
+    width:calc(100% + 240px);
   }
 }
 
