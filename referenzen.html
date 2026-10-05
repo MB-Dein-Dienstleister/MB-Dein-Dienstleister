@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Referenzen | MB Dein Dienstleister</title>
-<meta name="description" content="Ausgewählte Referenzprojekte von MB Dein Dienstleister – Naturstein, Treppen, Außenanlagen, Innenausbau und Objektservice.">
+<meta name="description" content="Ausgewählte Referenzprojekte von MB Dein Dienstleister – Naturstein, Treppen, Terrassen, Außenanlagen, Innenausbau und Objektservice.">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="theme-color" content="#071c33">
 <link rel="canonical" href="https://mbdeindienstleister.de/referenzen.html">
@@ -184,6 +184,62 @@ header{
 .material-photo{min-height:320px;border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
 .material-photo img{width:100%;height:100%;object-fit:cover}
 
+.reference-intro{max-width:820px;margin-bottom:20px}
+.reference-intro h2{
+  margin:7px 0 10px;font-size:clamp(34px,4vw,52px);line-height:.98;letter-spacing:-.05em
+}
+.reference-intro p{margin:0;color:var(--muted);font-size:13px}
+.reference-case{padding:22px;margin-top:18px}
+.reference-case-head{
+  display:grid;grid-template-columns:1fr auto;gap:22px;align-items:end
+}
+.reference-case-head h3{
+  margin:5px 0 8px;font-size:clamp(25px,2.8vw,38px);line-height:1;letter-spacing:-.04em
+}
+.reference-case-head p{max-width:760px;margin:0;color:var(--muted);font-size:12px}
+.reference-case-head p+p{margin-top:8px}
+.case-badge{
+  align-self:start;padding:9px 12px;border-radius:999px;
+  background:rgba(7,28,51,.92);color:#f5efe6;font-size:9px;font-weight:850;
+  letter-spacing:.12em;text-transform:uppercase;white-space:nowrap
+}
+.case-steps{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:18px 0 0;padding:0;
+  list-style:none;counter-reset:workstep
+}
+.case-steps li{
+  position:relative;min-height:54px;padding:11px 12px 11px 42px;border-radius:10px;
+  background:rgba(255,255,255,.62);border:1px solid rgba(7,28,51,.09);
+  color:var(--navy);font-size:10px;font-weight:760;line-height:1.35;
+  counter-increment:workstep
+}
+.case-steps li::before{
+  content:counter(workstep);position:absolute;left:11px;top:11px;width:22px;height:22px;
+  display:grid;place-items:center;border-radius:50%;background:var(--gold);color:var(--navy);
+  font-size:9px;font-weight:900
+}
+.reference-gallery{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:18px
+}
+.reference-gallery.six{grid-template-columns:repeat(3,1fr)}
+.reference-gallery.five{grid-template-columns:repeat(5,1fr)}
+.reference-shot{
+  position:relative;margin:0;aspect-ratio:3/4;border-radius:10px;overflow:hidden;
+  background:#0b2948;box-shadow:0 10px 25px rgba(6,24,43,.13)
+}
+.reference-shot img{width:100%;height:100%;object-fit:cover}
+.reference-shot::after{
+  content:"";position:absolute;inset:50% 0 0;
+  background:linear-gradient(transparent,rgba(4,18,31,.88));pointer-events:none
+}
+.reference-shot figcaption{
+  position:absolute;z-index:2;left:13px;right:13px;bottom:12px;color:white
+}
+.reference-shot figcaption b{
+  display:block;color:var(--gold2);font-size:9px;letter-spacing:.14em;text-transform:uppercase
+}
+.reference-shot figcaption span{display:block;margin-top:3px;font-size:11px;font-weight:750}
+
 .cta-photo{
   position:relative;overflow:hidden;color:white;
   background:
@@ -220,6 +276,7 @@ footer{background:#06172a;color:#c6d0da;padding:25px 0}
   .wrap{width:min(100% - 30px,1260px)}
   .menu{gap:16px}.menu a{font-size:10px}
   .process-grid{grid-template-columns:repeat(2,1fr)}
+  .reference-gallery.five{grid-template-columns:repeat(3,1fr)}
 }
 @media(max-width:760px){
   .maintenance{font-size:9px}
@@ -229,6 +286,9 @@ footer{background:#06172a;color:#c6d0da;padding:25px 0}
   .compare{grid-template-columns:1fr}.compare-card{min-height:300px}
   .project-grid,.material,.cta{grid-template-columns:1fr}
   .process-grid{grid-template-columns:1fr}
+  .reference-case-head{grid-template-columns:1fr}
+  .case-steps{grid-template-columns:repeat(2,1fr)}
+  .reference-gallery,.reference-gallery.six,.reference-gallery.five{grid-template-columns:repeat(2,1fr)}
   .material-list{grid-template-columns:1fr}
   .footer{align-items:flex-start;flex-wrap:wrap}.footer-nav{margin-left:0}.footer-area{text-align:left}
   section{padding:40px 0}
@@ -236,6 +296,8 @@ footer{background:#06172a;color:#c6d0da;padding:25px 0}
 @media(max-width:430px){
   .wrap{width:calc(100% - 22px)}
   .brand-text{display:none}
+  .case-steps{grid-template-columns:1fr}
+  .reference-gallery,.reference-gallery.six,.reference-gallery.five{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -405,6 +467,113 @@ footer{background:#06172a;color:#c6d0da;padding:25px 0}
     <div class="material-photo">
       <img src="Images/rosa-beta-farbmuster.jpeg" alt="Nahaufnahme des Farbmusters von Rosa Beta Granit">
     </div>
+  </div>
+</section>
+
+<section class="geo-light more-references">
+  <div class="wrap">
+    <div class="reference-intro">
+      <div class="kicker">Weitere Referenzen</div>
+      <h2>Vom Bestand bis zum fertigen Ergebnis</h2>
+      <p>
+        Zwei weitere Einblicke in ausgeführte Arbeiten – nachvollziehbar vom ursprünglichen
+        Zustand über die handwerkliche Bearbeitung bis zur fertigen Fläche.
+      </p>
+    </div>
+
+    <article class="reference-case glass">
+      <div class="reference-case-head">
+        <div>
+          <div class="kicker">Terrassenbau</div>
+          <h3>Vom alten Holzdeck zur Terrasse mit 20-mm-Keramikplatten</h3>
+          <p>
+            Nach dem Rückbau des alten Holzdecks wurde die Fläche gründlich gereinigt und
+            grundiert. Anschließend wurde der Gefälleestrich fachgerecht abgezogen und vor
+            dem weiteren Aufbau vollständig austrocknen gelassen.
+          </p>
+          <p>
+            Darauf folgten eine Verbundabdichtungsmatte und <strong>DITRA-DRAIN 8</strong> als
+            Drainage- und Entkopplungsschicht. Abschließend wurden 20&nbsp;mm starke
+            Keramikplatten mit Abschlussprofilen verlegt und fachgerecht verfugt.
+          </p>
+        </div>
+        <div class="case-badge">Vorher · Aufbau · Ergebnis</div>
+      </div>
+
+      <ol class="case-steps" aria-label="Arbeitsschritte beim Terrassenaufbau">
+        <li>Altes Holzdeck vollständig zurückgebaut</li>
+        <li>Fläche gereinigt und grundiert</li>
+        <li>Gefälleestrich hergestellt und getrocknet</li>
+        <li>Verbundabdichtungsmatte aufgebracht</li>
+        <li>DITRA-DRAIN 8 als Drainage verlegt</li>
+        <li>20-mm-Keramikplatten mit Abschlussprofilen verlegt und verfugt</li>
+      </ol>
+
+      <div class="reference-gallery six">
+        <figure class="reference-shot">
+          <img src="Images/referenz-terrasse-vorher.webp" alt="Terrassenbereich mit altem Holzdeck vor der Erneuerung" loading="lazy" decoding="async">
+          <figcaption><b>Vorher</b><span>Alter Holzbelag</span></figcaption>
+        </figure>
+        <figure class="reference-shot">
+          <img src="Images/referenz-terrasse-estrichprofil.webp" alt="Ausgerichtetes Estrichprofil für den neuen Terrassenaufbau" loading="lazy" decoding="async">
+          <figcaption><b>Untergrund</b><span>Estrichprofil ausgerichtet</span></figcaption>
+        </figure>
+        <figure class="reference-shot">
+          <img src="Images/referenz-terrasse-estrich.webp" alt="Neu hergestellte Estrichfläche der Terrasse" loading="lazy" decoding="async">
+          <figcaption><b>Aufbau</b><span>Gefälleestrich abgezogen</span></figcaption>
+        </figure>
+        <figure class="reference-shot">
+          <img src="Images/referenz-terrasse-verfugung.webp" alt="Neue Terrassenplatten während der Verfugung" loading="lazy" decoding="async">
+          <figcaption><b>Verlauf</b><span>Verfugung der Fläche</span></figcaption>
+        </figure>
+        <figure class="reference-shot">
+          <img src="Images/referenz-terrasse-fertig.webp" alt="Fertiggestellte Terrassenfläche im Garten" loading="lazy" decoding="async">
+          <figcaption><b>Nachher</b><span>Neue Terrassenfläche</span></figcaption>
+        </figure>
+        <figure class="reference-shot">
+          <img src="Images/referenz-terrasse-detail.webp" alt="Detailansicht der fertig verlegten Terrassenplatten" loading="lazy" decoding="async">
+          <figcaption><b>Detail</b><span>Fugenbild und Oberfläche</span></figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <article class="reference-case glass">
+      <div class="reference-case-head">
+        <div>
+          <div class="kicker">Naturstein & Treppen</div>
+          <h3>Kellertreppe aus Rosa Beta mit Steel-Grey-Abdeckungen</h3>
+          <p>
+            Der alte Fliesenbelag wurde entfernt, der Treppenkörper vorbereitet und
+            anschließend mit passgenauen Treppenelementen aus <strong>Rosa Beta</strong> neu belegt.
+            Die seitlichen Mauerabdeckungen wurden in <strong>Steel Grey</strong> ausgeführt.
+          </p>
+        </div>
+        <div class="case-badge">Vorher · Vorbereitung · Nachher</div>
+      </div>
+
+      <div class="reference-gallery five">
+        <figure class="reference-shot">
+          <img src="Images/referenz-kellertreppe-vorher.webp" alt="Kellertreppe mit altem Fliesenbelag vor der Sanierung" loading="lazy" decoding="async">
+          <figcaption><b>Vorher</b><span>Alter Fliesenbelag</span></figcaption>
+        </figure>
+        <figure class="reference-shot">
+          <img src="Images/referenz-kellertreppe-vorbereitung.webp" alt="Freigelegter und vorbereiteter Treppenkörper" loading="lazy" decoding="async">
+          <figcaption><b>Vorbereitung</b><span>Treppenkörper bearbeitet</span></figcaption>
+        </figure>
+        <figure class="reference-shot">
+          <img src="Images/referenz-kellertreppe-fertig-gesamt.webp" alt="Fertig sanierte Kellertreppe aus Rosa Beta mit Mauerabdeckungen in Steel Grey" loading="lazy" decoding="async">
+          <figcaption><b>Nachher</b><span>Rosa Beta und Steel Grey</span></figcaption>
+        </figure>
+        <figure class="reference-shot">
+          <img src="Images/referenz-kellertreppe-fertig-oben.webp" alt="Fertiges oberes Podest mit Mauerabdeckungen in Steel Grey" loading="lazy" decoding="async">
+          <figcaption><b>Nachher</b><span>Steel-Grey-Abdeckungen</span></figcaption>
+        </figure>
+        <figure class="reference-shot">
+          <img src="Images/referenz-kellertreppe-fertig-detail.webp" alt="Detailansicht der fertigen Treppenstufen aus Rosa Beta" loading="lazy" decoding="async">
+          <figcaption><b>Detail</b><span>Rosa-Beta-Stufen</span></figcaption>
+        </figure>
+      </div>
+    </article>
   </div>
 </section>
 
