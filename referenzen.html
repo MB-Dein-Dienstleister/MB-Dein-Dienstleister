@@ -218,6 +218,17 @@ header{
   display:grid;place-items:center;border-radius:50%;background:var(--gold);color:var(--navy);
   font-size:9px;font-weight:900
 }
+.project-materials{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:18px
+}
+.project-material{
+  display:grid;grid-template-columns:140px 1fr;min-height:110px;margin:0;overflow:hidden;
+  border-radius:10px;background:rgba(255,255,255,.62);border:1px solid rgba(7,28,51,.09)
+}
+.project-material img{width:140px;height:110px;object-fit:cover}
+.project-material figcaption{display:flex;flex-direction:column;justify-content:center;padding:13px}
+.project-material figcaption b{font-size:14px;color:var(--navy)}
+.project-material figcaption span{margin-top:3px;font-size:10px;color:var(--muted)}
 .reference-gallery{
   display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:18px
 }
@@ -288,6 +299,7 @@ footer{background:#06172a;color:#c6d0da;padding:25px 0}
   .process-grid{grid-template-columns:1fr}
   .reference-case-head{grid-template-columns:1fr}
   .case-steps{grid-template-columns:repeat(2,1fr)}
+  .project-materials{grid-template-columns:1fr}
   .reference-gallery,.reference-gallery.six,.reference-gallery.five{grid-template-columns:repeat(2,1fr)}
   .material-list{grid-template-columns:1fr}
   .footer{align-items:flex-start;flex-wrap:wrap}.footer-nav{margin-left:0}.footer-area{text-align:left}
@@ -297,6 +309,7 @@ footer{background:#06172a;color:#c6d0da;padding:25px 0}
   .wrap{width:calc(100% - 22px)}
   .brand-text{display:none}
   .case-steps{grid-template-columns:1fr}
+  .project-material{grid-template-columns:110px 1fr}.project-material img{width:110px}
   .reference-gallery,.reference-gallery.six,.reference-gallery.five{grid-template-columns:1fr}
 }
 </style>
@@ -551,6 +564,17 @@ footer{background:#06172a;color:#c6d0da;padding:25px 0}
         <div class="case-badge">Vorher · Vorbereitung · Nachher</div>
       </div>
 
+      <div class="project-materials" aria-label="Verwendete Natursteine">
+        <figure class="project-material">
+          <img src="Images/rosa-beta-farbmuster.jpeg" alt="Farbmuster des Natursteins Rosa Beta" loading="lazy" decoding="async">
+          <figcaption><b>Rosa Beta</b><span>Treppenstufen und Podest</span></figcaption>
+        </figure>
+        <figure class="project-material">
+          <img src="Images/steel-grey-farbmuster.webp" alt="Farbmuster des Natursteins Steel Grey" loading="lazy" decoding="async">
+          <figcaption><b>Steel Grey</b><span>Seitliche Mauerabdeckungen</span></figcaption>
+        </figure>
+      </div>
+
       <div class="reference-gallery five">
         <figure class="reference-shot">
           <img src="Images/referenz-kellertreppe-vorher.webp" alt="Kellertreppe mit altem Fliesenbelag vor der Sanierung" loading="lazy" decoding="async">
@@ -565,12 +589,12 @@ footer{background:#06172a;color:#c6d0da;padding:25px 0}
           <figcaption><b>Nachher</b><span>Rosa Beta und Steel Grey</span></figcaption>
         </figure>
         <figure class="reference-shot">
-          <img src="Images/referenz-kellertreppe-fertig-oben.webp" alt="Fertiges oberes Podest mit Mauerabdeckungen in Steel Grey" loading="lazy" decoding="async">
-          <figcaption><b>Nachher</b><span>Steel-Grey-Abdeckungen</span></figcaption>
-        </figure>
-        <figure class="reference-shot">
           <img src="Images/referenz-kellertreppe-fertig-detail.webp" alt="Detailansicht der fertigen Treppenstufen aus Rosa Beta" loading="lazy" decoding="async">
           <figcaption><b>Detail</b><span>Rosa-Beta-Stufen</span></figcaption>
+        </figure>
+        <figure class="reference-shot">
+          <img src="Images/referenz-kellertreppe-fertig-oben.webp" alt="Vollständig fertiggestellte und versiegelte Kellertreppe aus Rosa Beta mit Steel-Grey-Abdeckungen" loading="lazy" decoding="async">
+          <figcaption><b>Endergebnis</b><span>Fertig versiegelt</span></figcaption>
         </figure>
       </div>
     </article>
